@@ -1,0 +1,51 @@
+# --------------------MAVEN BUILD OUTPUT----------------------  
+# Never commit compiled files!
+# --------------------------------------------------------
+**/target/
+**/*.jar
+**/*.war
+**/*.class
+
+# --------------------ECLIPSE IDE FILES-------------------  
+**/.classpath
+**/.project
+**/.settings/
+**/.factorypath
+**/bin/
+
+# --------------------INTELLIJ IDEA--------------------
+**/.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+
+# --------------------VS CODE--------------------
+**/.vscode/
+
+# --------------------SPRING BOOT----------------------
+# NEVER commit passwords or secrets!
+# ---------------------------------------------------------
+**/application-local.yml
+**/application-local.properties
+**/application-prod.yml
+**/application-prod.properties
+**/.env
+
+# --------------------LOGS----------------------
+*.log
+**/logs/
+**/log/
+
+# --------------------OS GENERATED FILES----------------------
+# Mac
+.DS_Store
+.AppleDouble
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# --------------------MAVEN WRAPPER----------------------
+!.mvn/wrapper/maven-wrapper.jar
+
+.metadata

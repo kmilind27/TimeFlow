@@ -1,0 +1,539 @@
+/* ── Page Header ────────────────────────────────────── */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.pageSubtitle {
+  color: #666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* ── Buttons ────────────────────────────────────────── */
+.primaryBtn {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.primaryBtn:hover:not(:disabled) {
+  background: #283593;
+  transform: translateY(-1px);
+}
+
+.primaryBtn:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.secondaryBtn {
+  background: white;
+  color: #1a237e;
+  border: 1.5px solid #1a237e;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.secondaryBtn:hover {
+  background: #e8eaf6;
+}
+
+/* ── Messages ───────────────────────────────────────── */
+.errorBox {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  border-left: 4px solid #c62828;
+  margin-bottom: 16px;
+}
+
+.successBox {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  border-left: 4px solid #2e7d32;
+  margin-bottom: 16px;
+}
+
+/* ── Quick Card ─────────────────────────────────────── */
+.quickCard {
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.quickCardLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.quickCardIcon {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quickCardTitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.quickCardSubtitle {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.quickCard .primaryBtn {
+  background: white;
+  color: #1a237e;
+}
+
+.quickCard .primaryBtn:hover {
+  background: #e8eaf6;
+}
+
+/* ── Timesheet List ─────────────────────────────────── */
+.timesheetList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.timesheetCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.weekLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hoursLabel {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.statusBadge {
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ── Entries Preview ────────────────────────────────── */
+.entriesPreview {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.entryRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+}
+
+.entryRow:last-child {
+  border-bottom: none;
+}
+
+.entryProject {
+  color: #333;
+  font-weight: 500;
+  flex: 1;
+}
+
+.entryDate {
+  color: #888;
+  margin: 0 12px;
+}
+
+.entryHours {
+  color: #1a237e;
+  font-weight: 600;
+}
+
+.moreEntries {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* ── Review Comment ─────────────────────────────────── */
+.reviewComment {
+  background: #fff3e0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #e65100;
+  margin-bottom: 16px;
+  border-left: 4px solid #ff9800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Card Actions ───────────────────────────────────── */
+.cardActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* ── Empty State ────────────────────────────────────── */
+.emptyState {
+  background: white;
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.emptyIcon {
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.emptyState h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.emptyState p {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* ── Week Navigator ─────────────────────────────────── */
+.weekNavigator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.weekNavBtn {
+  background: #e8eaf6;
+  color: #1a237e;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.weekNavBtn:hover:not(:disabled) {
+  background: #c5cae9;
+}
+
+.weekNavBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.weekInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.currentWeekBadge {
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+
+/* ── Log Entry Grid ─────────────────────────────────── */
+.logEntryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ── Form Card ──────────────────────────────────────── */
+.formCard,
+.summaryCard {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.input,
+.select,
+.textarea {
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  font-family: inherit;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #3949ab;
+  box-shadow: 0 0 0 3px rgba(57,73,171,0.1);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+/* ── Summary Card ───────────────────────────────────── */
+.summaryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.totalHours {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.totalHoursNumber {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a237e;
+  line-height: 1;
+}
+
+.totalHoursLabel {
+  font-size: 14px;
+  color: #888;
+}
+
+/* ── Entries List ───────────────────────────────────── */
+.entriesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.entryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.entryItemLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.entryProject {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.entryDate {
+  font-size: 12px;
+  color: #888;
+}
+
+.entryTask {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+.entryHoursBig {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.emptyEntries {
+  text-align: center;
+  padding: 40px 0;
+  color: #888;
+  font-size: 14px;
+}
+
+/* ── Submit Button ──────────────────────────────────── */
+.submitTimesheetBtn {
+  width: 100%;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submitTimesheetBtn:hover:not(:disabled) {
+  background: #1b5e20;
+}
+
+.submitTimesheetBtn:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+}
+
+/* ── Status Messages ────────────────────────────────── */
+.statusMessage {
+  background: #e3f2fd;
+  color: #0d47a1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.statusMessageSuccess {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.statusMessageError {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+

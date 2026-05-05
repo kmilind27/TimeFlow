@@ -1,0 +1,63 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/authdb?createDatabaseIfNotExist=true}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:kilysm}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  rabbitmq:
+    host: localhost      # local Eclipse
+    port: 5672
+    username: admin
+    password: admin
+
+springdoc:
+  api-docs:
+    path: /auth/v3/api-docs        # JSON docs endpoint
+  swagger-ui:
+    path: /swagger-ui.html   # UI endpoint
+    operationsSorter: method
+    tagsSorter: alpha
+    #persist-authorization: true
+
+jwt:
+  secret: ${JWT_SECRET:3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+otp:
+  expiry-minutes: ${OTP_EXPIRY_MINUTES:5}
+  reset-token-expiry-minutes: ${OTP_RESET_TOKEN_EXPIRY_MINUTES:10}
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    lease-renewal-interval-in-seconds: 10
+#    prefer-ip-address: true
+#    ip-address: 127.0.0.1
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  tracing:
+    sampling:
+      probability: 1.0
+    export:
+      zipkin:
+        endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT:http://localhost:9411/api/v2/spans}
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{traceId:-},%X{spanId:-}]"

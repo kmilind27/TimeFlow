@@ -1,0 +1,41 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.content {
+  text-align: center;
+}
+
+.errorCode {
+  font-size: 120px;
+  font-weight: 800;
+  color: #1f2937;
+  line-height: 1;
+  margin: 0 0 16px 0;
+}
+
+.message {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0 0 32px 0;
+}
+
+.homeBtn {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.homeBtn:hover {
+  background: #2563eb;
+}

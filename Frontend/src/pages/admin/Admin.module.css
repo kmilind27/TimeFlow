@@ -1,0 +1,880 @@
+/* ── Page Header ────────────────────────────────────── */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.pageSubtitle {
+  color: #666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.refreshBtn {
+  background: #e8eaf6;
+  color: #1a237e;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.refreshBtn:hover {
+  background: #c5cae9;
+}
+
+.userCount {
+  background: #e8eaf6;
+  color: #1a237e;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.retryBtn {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* ── Messages ───────────────────────────────────────── */
+.errorBox {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  border-left: 4px solid #c62828;
+  margin-bottom: 16px;
+}
+
+.successBox {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  border-left: 4px solid #2e7d32;
+  margin-bottom: 16px;
+}
+
+/* ── Stats Grid ─────────────────────────────────────── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-left: 4px solid transparent;
+}
+
+.statBlue   { border-left-color: #2196f3; }
+.statGreen  { border-left-color: #4caf50; }
+.statOrange { border-left-color: #ff9800; }
+.statPurple { border-left-color: #9c27b0; }
+
+.statIcon {
+  font-size: 32px;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a237e;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* ── Bottom Grid ────────────────────────────────────── */
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ── Table Card ─────────────────────────────────────── */
+.tableCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 16px;
+}
+
+.emptyText {
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ── Table ──────────────────────────────────────────── */
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.5fr 1fr;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.5fr 1fr;
+  padding: 10px 12px;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 13px;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.employeeCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.miniAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.employeeName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+.employeeEmail {
+  font-size: 11px;
+  color: #888;
+}
+
+.weekCell {
+  font-size: 12px;
+  color: #555;
+}
+
+.hoursCell {
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.typeCell {
+  font-size: 12px;
+  color: #555;
+}
+
+.daysCell {
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.statusPill {
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ── Search Bar ─────────────────────────────────────── */
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.searchIcon {
+  font-size: 16px;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  background: transparent;
+  font-family: inherit;
+}
+
+.clearSearch {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.clearSearch:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* ── User List ──────────────────────────────────────── */
+.userList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── User Card ──────────────────────────────────────── */
+.userCard {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.userCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.userAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.userNameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.userName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+}
+
+.youBadge {
+  background: #e8eaf6;
+  color: #1a237e;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.userEmail {
+  font-size: 13px;
+  color: #666;
+}
+
+.userEmpCode {
+  font-size: 12px;
+  color: #999;
+}
+
+/* ── Badges ─────────────────────────────────────────── */
+.userBadges {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.roleBadge,
+.statusBadge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.roleAdmin    { background: #e8eaf6; color: #1a237e; }
+.roleManager  { background: #e3f2fd; color: #0d47a1; }
+.roleEmployee { background: #e8f5e9; color: #2e7d32; }
+.statusActive   { background: #e8f5e9; color: #2e7d32; }
+.statusInactive { background: #ffebee; color: #c62828; }
+
+/* ── User Actions ───────────────────────────────────── */
+.userActions {
+  display: flex;
+  gap: 8px;
+}
+
+.changeRoleBtn {
+  background: #e8eaf6;
+  color: #1a237e;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.changeRoleBtn:hover {
+  background: #c5cae9;
+}
+
+.changeStatusBtn {
+  background: #fff3e0;
+  color: #e65100;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.changeStatusBtn:hover {
+  background: #ffe0b2;
+}
+
+.assignManagerBtn {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.assignManagerBtn:hover {
+  background: #c8e6c9;
+}
+
+/* ── Kebab Menu ─────────────────────────────────────── */
+.kebabMenuContainer {
+  position: relative;
+}
+
+.kebabMenuBtn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.kebabMenuBtn:hover {
+  background: #f3f4f6;
+}
+
+.kebabMenu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 180px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  background: white;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+.menuItem:hover {
+  background: #f9fafb;
+}
+
+/* ── Action Panel ───────────────────────────────────── */
+.actionPanel {
+  border-top: 1.5px solid #f0f0f0;
+  padding-top: 14px;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actionLabel {
+  font-size: 13px;
+  color: #555;
+}
+
+.roleOptions {
+  display: flex;
+  gap: 8px;
+}
+
+.roleOption {
+  padding: 8px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.roleOption:hover {
+  border-color: #1a237e;
+  color: #1a237e;
+}
+
+.roleOptionActive {
+  background: #1a237e;
+  color: white;
+  border-color: #1a237e;
+}
+
+.managerSelect {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  background: white;
+}
+
+.managerSelect:focus {
+  border-color: #3949ab;
+  box-shadow: 0 0 0 3px rgba(57,73,171,0.1);
+}
+
+.actionPanelButtons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.cancelActionBtn {
+  background: #f5f5f5;
+  color: #555;
+  border: 1.5px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cancelActionBtn:hover {
+  background: #eeeeee;
+}
+
+.confirmActionBtn {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.confirmActionBtn:hover:not(:disabled) {
+  background: #283593;
+}
+
+.confirmActionBtn:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+}
+
+/* ── Empty State ────────────────────────────────────── */
+.emptyState {
+  background: white;
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.emptyIcon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.emptyState h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.emptyState p {
+  color: #888;
+}
+
+
+
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tableHeader {
+    display: none;
+  }
+
+  .tableRow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 16px 12px;
+  }
+
+  .userCardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .userActions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .changeRoleBtn,
+  .changeStatusBtn {
+    width: 100%;
+  }
+
+  .roleOptions {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* ── Holiday Form ───────────────────────────────────── */
+.formCard {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 24px;
+}
+
+.holidayForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.input {
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  font-family: inherit;
+}
+
+.input:focus {
+  border-color: #3949ab;
+  box-shadow: 0 0 0 3px rgba(57,73,171,0.1);
+}
+
+.primaryBtn {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.primaryBtn:hover:not(:disabled) {
+  background: #283593;
+}
+
+.primaryBtn:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+}
+
+/* ── Holiday Grid ───────────────────────────────────── */
+.holidayGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.holidayCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+
+.holidayCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.holidayDateBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #e8eaf6;
+  border-radius: 10px;
+  padding: 12px 16px;
+  min-width: 60px;
+}
+
+.holidayDay {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a237e;
+  line-height: 1;
+}
+
+.holidayMonth {
+  font-size: 12px;
+  color: #3949ab;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.holidayInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.holidayName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.holidayWeekday {
+  font-size: 13px;
+  color: #888;
+}
+
+.holidayDesc {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .holidayGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .holidayGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pastHoliday {
+  opacity: 0.5;
+}
+
+.pastHoliday:hover {
+  opacity: 0.6;
+}
+
+.holidayType {
+  font-size: 11px;
+  color: #3b82f6;
+  background: #eff6ff;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.select {
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  font-family: inherit;
+  background: white;
+}
+
+.select:focus {
+  border-color: #3949ab;
+  box-shadow: 0 0 0 3px rgba(57,73,171,0.1);
+}
+
+.clickableCard {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.clickableCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.clickableCard:active {
+  transform: translateY(0);
+}

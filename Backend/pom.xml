@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.company</groupId>
+    <artifactId>timesheet-system-backend</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>Timesheet System Backend</name>
+    <description>Root Aggregator for Timesheet System Microservices</description>
+
+    <modules>
+        <module>admin-service</module>
+        <module>api-gateway</module>
+        <module>auth-service</module>
+        <module>eureka-server</module>
+        <module>leave-service</module>
+        <module>notification-service</module>
+        <module>timesheet-service</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        
+        <!-- SonarQube Configuration -->
+        <sonar.projectKey>timesheet-system-backend</sonar.projectKey>
+        <sonar.projectName>Timesheet System Backend</sonar.projectName>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.token>${env.SONAR_TOKEN}</sonar.token>
+        
+        <!-- Coverage Aggregation -->
+        <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.java.binaries>target/classes</sonar.java.binaries>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>5.5.0.6356</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

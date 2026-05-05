@@ -1,0 +1,485 @@
+/* ── Page Header ────────────────────────────────────── */
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.pageSubtitle {
+  color: #666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* ── Buttons ────────────────────────────────────────── */
+.primaryBtn {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.primaryBtn:hover:not(:disabled) {
+  background: #283593;
+  transform: translateY(-1px);
+}
+
+.primaryBtn:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.secondaryBtn {
+  background: white;
+  color: #1a237e;
+  border: 1.5px solid #1a237e;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.secondaryBtn:hover {
+  background: #e8eaf6;
+}
+
+.cancelBtn {
+  background: #ffebee;
+  color: #c62828;
+  border: 1.5px solid #ef9a9a;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.cancelBtn:hover:not(:disabled) {
+  background: #ffcdd2;
+}
+
+.cancelBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Messages ───────────────────────────────────────── */
+.errorBox {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  border-left: 4px solid #c62828;
+  margin-bottom: 16px;
+}
+
+.successBox {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  border-left: 4px solid #2e7d32;
+  margin-bottom: 16px;
+}
+
+/* ── Balance Grid ───────────────────────────────────── */
+.balanceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.balanceCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.balanceCardTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.balanceIcon {
+  font-size: 24px;
+}
+
+.balanceType {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.progressSection {
+  margin-bottom: 16px;
+}
+
+.progressBar {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.progressLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #888;
+}
+
+.remainingSection {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.remainingNumber {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.remainingLabel {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ── Section Header ─────────────────────────────────── */
+.sectionHeader {
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+/* ── Holiday List ───────────────────────────────────── */
+.holidayList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.holidayCard {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.holidayDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #e8eaf6;
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-width: 50px;
+}
+
+.holidayDay {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a237e;
+  line-height: 1;
+}
+
+.holidayMonth {
+  font-size: 11px;
+  color: #3949ab;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.holidayInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.holidayName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.holidayWeekday {
+  font-size: 12px;
+  color: #888;
+}
+
+.emptyHolidays {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  grid-column: 1/-1;
+}
+
+/* ── Apply Leave Grid ───────────────────────────────── */
+.applyGrid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+.formCard,
+.balanceSummaryCard {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.input,
+.select,
+.textarea {
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  font-family: inherit;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #3949ab;
+  box-shadow: 0 0 0 3px rgba(57,73,171,0.1);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+/* ── Balance Indicator ──────────────────────────────── */
+.balanceIndicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #555;
+  margin-top: -8px;
+}
+
+/* ── Balance Summary ────────────────────────────────── */
+.balanceSummaryList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.balanceSummaryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.balanceSummaryLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.balanceSummaryType {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.balanceSummaryUsed {
+  font-size: 12px;
+  color: #888;
+}
+
+.balanceSummaryRemaining {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* ── Leave List ─────────────────────────────────────── */
+.leaveList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.leaveCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.leaveCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.leaveTypeSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.leaveTypeIcon {
+  font-size: 24px;
+}
+
+.leaveType {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+}
+
+.leaveDates {
+  font-size: 13px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.leaveCardRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.statusBadge {
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.leaveDaysCount {
+  font-size: 13px;
+  color: #888;
+}
+
+.leaveReason {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.managerComment {
+  background: #fff3e0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #e65100;
+  margin-bottom: 10px;
+  border-left: 4px solid #ff9800;
+}
+
+.leaveCardActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* ── Empty State ────────────────────────────────────── */
+.emptyState {
+  background: white;
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.emptyIcon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.emptyState h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.emptyState p {
+  color: #888;
+  margin-bottom: 20px;
+}
+

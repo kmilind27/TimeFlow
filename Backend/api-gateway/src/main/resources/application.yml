@@ -1,0 +1,70 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: auth-service
+              uri: lb://auth-service
+              predicates:
+                - Path=/auth/**
+
+            - id: timesheet-service
+              uri: lb://timesheet-service
+              predicates:
+                - Path=/timesheet/**					
+
+            - id: leave-service
+              uri: lb://leave-service
+              predicates:
+                - Path=/leave/**
+
+            - id: admin-service
+              uri: lb://admin-service
+              predicates:
+                - Path=/admin/**					
+
+  rabbitmq:
+    host: localhost      # local Eclipse
+    port: 5672
+    username: admin
+    password: admin							
+jwt:
+  secret: ${JWT_SECRET:3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    lease-renewal-interval-in-seconds: 10
+
+
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT:http://localhost:9411/api/v2/spans}
+
+
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{traceId:-},%X{spanId:-}]"
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    com.company.apigateway: DEBUG
